@@ -39,28 +39,28 @@ set arrMajors =objXML.getElementsByTagName("major")
 set arrClass =objXML.getElementsByTagName("class")
 
 
-Response.Write "<table border='0' width='100%'>"
-Response.Write "<tr><td bgcolor='#00CCFF' align='center' height='26'>"
-Response.Write "<b>学生信息如下：</b>"
-Response.Write "</td></tr>"
+'Response.Write "<table border='0' width='100%'>"
+'Response.Write "<tr><td bgcolor='#00CCFF' align='center' height='26'>"
+'Response.Write "<b>学生信息如下：</b>"
+'Response.Write "</td></tr>"
 
 '输出留言本各元素的内容，最新的留言先显示
-For x=arrNames.length-1 To 0 Step -1
-	Response.Write "<tr>"
-	Response.Write"<td>姓名:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" & arrNames.item(x).text & "</td>"
-	Response.Write "<td>学号:" & arrIds.item(x).text & "<td>"
+'For x=arrNames.length-1 To 0 Step -1
+'	Response.Write "<tr>"
+'	Response.Write"<td>姓名:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" & arrNames.item(x).text & "</td>"
+'	Response.Write "<td>学号:" & arrIds.item(x).text & "<td>"
 
-	Response.Write"<td>性别:</td><td>" & arrSexs.item(x).text & "</td>"
-	Response.Write "<td>籍贯:" & arrOrigs.item(x).text & "<td>"
+'	Response.Write"<td>性别:</td><td>" & arrSexs.item(x).text & "</td>"
+'	Response.Write "<td>籍贯:" & arrOrigs.item(x).text & "<td>"
 
-	Response.Write"<td>学院:</td><td>" & arrAcades.item(x).text & "</td>"
-	Response.Write "<td>专业:" & arrMajors.item(x).text & "<td>"
+'	Response.Write"<td>学院:</td><td>" & arrAcades.item(x).text & "</td>"
+'	Response.Write "<td>专业:" & arrMajors.item(x).text & "<td>"
 
-	Response.Write "<td>班级:</td><td>" & arrClass.item(x).text & "</td>"
-	Response.Write "<td></td>"
-	Response.Write"</tr>"
+'	Response.Write "<td>班级:</td><td>" & arrClass.item(x).text & "</td>"
+'	Response.Write "<td></td>"
+'	Response.Write"</tr>"
 	
-	Next
+'	Next
 	Response.Write "</table>"
 	Set objXML = nothing
 End Function
